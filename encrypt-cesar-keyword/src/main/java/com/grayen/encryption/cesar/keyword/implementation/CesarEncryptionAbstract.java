@@ -19,7 +19,7 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
 
     @Override
     public String encrypt(String sourceText, String keyword, Integer offset) {
-        Map encryptionTable = getEncryptionTable(keyword, offset);
+        Map<String, String> encryptionTable = getEncryptionTable(keyword, offset);
         return convertTextWithEncryptionTable(sourceText, encryptionTable);
     }
 
@@ -32,12 +32,12 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
     }
 
     public String decrypt(String sourceText, String keyword, Integer offset) {
-        Map encryptionTable = getEncryptionTable(keyword, offset);
+        Map<String, String> encryptionTable = getEncryptionTable(keyword, offset);
         encryptionTable = invertEncryptionTable(encryptionTable);
         return convertTextWithEncryptionTable(sourceText, encryptionTable);
     }
 
-    private Map invertEncryptionTable(Map encryptionTable) {
+    private Map<String, String> invertEncryptionTable(Map<String, String> encryptionTable) {
         Map<String, String> sourceMap = encryptionTable;
         Map<String, String> invertedMap = new HashMap<>();
 
@@ -47,7 +47,7 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
         return invertedMap;
     }
 
-    private String convertTextWithEncryptionTable(String sourceText, Map encryptionTable) {
+    private String convertTextWithEncryptionTable(String sourceText, Map<String, String> encryptionTable) {
         char[] sourceCharacters = sourceText.toCharArray();
         StringBuilder encryptedText = new StringBuilder();
 
@@ -58,12 +58,12 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
         return encryptedText.toString();
     }
 
-    private String convertCharacterWithEncryptionTable(char character, Map encryptionTable) {
+    private String convertCharacterWithEncryptionTable(char character, Map<String, String> encryptionTable) {
         String characterToEncode = Character.toString(character);
         String encryptedCharacter = (String) encryptionTable.get(characterToEncode);
         encryptedCharacter = encryptedCharacter == null ? " " : encryptedCharacter;
         return encryptedCharacter;
     }
 
-    protected abstract Map getEncryptionTable(String keyword, Integer offset);
+    protected abstract Map<String, String> getEncryptionTable(String keyword, Integer offset);
 }

@@ -1,11 +1,12 @@
 package com.grayen.encryption.cesar.keyword.implementation;
 
+import com.grayen.encryption.cesar.keyword.parameters.DefaultEncryptionParameters;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstract  {
+public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstract {
 
-    private static final String alphabetAscending = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.,";
     private String alphabet;
     private Integer encryptionTableSize;
     private String[] prepareEncryptionTable;
@@ -13,7 +14,7 @@ public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstrac
     @Override
     protected Map<String,String> getEncryptionTable(String keyword, Integer offset) {
         String securedKeyword = secureKeyword(keyword);
-        alphabet = alphabetAscending;
+        alphabet = DefaultEncryptionParameters.alphabetAscending;
         encryptionTableSize = alphabet.length();
         prepareEncryptionTable = new String[encryptionTableSize];
 
@@ -50,7 +51,7 @@ public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstrac
     private Map<String,String> getMapFromPrepareEncryptionTable() {
         Map<String,String> encryptionTable = new HashMap<>();
         for(Integer i = 0; i < encryptionTableSize; i++) {
-            encryptionTable.put(alphabetAscending.substring(i, i+1), prepareEncryptionTable[i]);
+            encryptionTable.put(DefaultEncryptionParameters.alphabetAscending.substring(i, i+1), prepareEncryptionTable[i]);
         }
         return encryptionTable;
     }

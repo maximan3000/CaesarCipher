@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fba9dd5-6f08-45c4-afb2-0b54d2dfb2b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHackFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/system/encrypt/CesarEncryptionKeyword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeyword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/system/encrypt/CesarEncryptionKeywordFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeywordFabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/system/encrypt/implementation/CesarEncryptionKeywordImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/system/parameters/DefaultEncryptionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/source/message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/source/message.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/system/encrypt/implementation/CesarEncryptionKeywordImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grayen/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/encryption/cesar/keyword/system/encrypt/CesarEncryptionKeyword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/encryption/cesar/keyword/system/encrypt/CesarEncryptionKeywordFabric.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/encryption/cesar/keyword/system/encrypt/implementation/CesarEncryptionKeywordImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/encryption/cesar/keyword/system/parameters/DefaultEncryptionParameters.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/message.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/grayen/encryption/cesar/keyword/system/encrypt/implementation/CesarEncryptionKeywordImplementationTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +23,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/encrypt_cesar_keyword$App.ic" NAME="App Coverage Results" MODIFIED="1536840465925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.grayen.*</FILTER>
+    </SUITE>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="885371802">
@@ -42,30 +41,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="21" />
+          <entry key="java" value="58" />
           <entry key="settings" value="1" />
-          <entry key="txt" value="11" />
+          <entry key="txt" value="21" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="21" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="JAVA" value="58" />
+          <entry key="PLAIN_TEXT" value="22" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="28" />
-          <entry key="java" value="1727" />
+          <entry key="dummy" value="75" />
+          <entry key="java" value="4138" />
+          <entry key="txt" value="16" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1727" />
-          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="JAVA" value="4138" />
+          <entry key="PLAIN_TEXT" value="91" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="391">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,19 +86,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/source/message.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="52" lean-forward="true" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            <state relative-caret-position="314">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="348">
+              <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,19 +107,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/message.txt">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/decrypted-message.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="59" selection-start-column="59" selection-end-column="60" />
+            <state relative-caret-position="92">
+              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -130,6 +121,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -139,6 +131,7 @@
       <find>key</find>
       <find>NotNull</find>
       <find>stream</find>
+      <find>Z</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,12 +143,20 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/system/encrypt/CesarEncryptionKeyword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeyword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHackFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/source/message.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionAbstract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/grayen/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/source/message.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharacters.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java" />
       </list>
     </option>
   </component>
@@ -176,10 +177,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="4" />
+    <option name="width" value="1022" />
+    <option name="height" value="654" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -240,7 +240,38 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grayen" type="462c0819:PsiDirectoryNode" />
               <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="hack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grayen" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="hack" type="462c0819:PsiDirectoryNode" />
               <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grayen" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grayen" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="parameters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
@@ -256,6 +287,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="encrypted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="hacked" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
@@ -284,6 +323,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt-cesar-keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt-cesar-keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
               <item name="implementation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -293,12 +350,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536785760257" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536843198777" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.grayen.encryption.cesar.keyword.hack.implementation" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.grayen.encryption.cesar.keyword.parameters.DefaultEncryptionParameters" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.grayen.encryption.cesar.keyword.implementation" />
       <recent name="com.grayen.encryption.cesar.keyword" />
       <recent name="com.grayen.encryption.cesar.keyword.system.encryption" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.grayen.encryption.cesar.keyword.hack.implementation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Maksim.Petrov\Desktop\EncryptionCesarWithKey\encrypt-cesar-keyword\src\main\resources\source" />
@@ -316,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.CesarEncryptionHackFrequencyCharactersTest.shouldMakeCorrectEncryptionTable">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.grayen.App" />
       <module name="encrypt-cesar-keyword" />
@@ -330,23 +402,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CesarEncryptionKeywordImplementationTest.shouldDecryptString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CesarEncryptionHackFrequencyCharactersTest.shouldMakeCorrectEncryptionTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="encrypt-cesar-keyword" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.grayen.encryption.cesar.keyword.implementation.*" />
+          <option name="PATTERN" value="com.grayen.encryption.cesar.keyword.hack.implementation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.grayen.encryption.cesar.keyword.implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.grayen.encryption.cesar.keyword.implementation.CesarEncryptionKeywordImplementationTest" />
-      <option name="METHOD_NAME" value="shouldDecryptString" />
+      <option name="PACKAGE_NAME" value="com.grayen.encryption.cesar.keyword.hack.implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.grayen.encryption.cesar.keyword.hack.implementation.CesarEncryptionHackFrequencyCharactersTest" />
+      <option name="METHOD_NAME" value="shouldMakeCorrectEncryptionTable" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CesarEncryptionKeywordImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="encrypt-cesar-keyword" />
       <extension name="coverage">
         <pattern>
@@ -356,8 +428,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.grayen.encryption.cesar.keyword.implementation" />
       <option name="MAIN_CLASS_NAME" value="com.grayen.encryption.cesar.keyword.implementation.CesarEncryptionKeywordImplementationTest" />
-      <option name="METHOD_NAME" value="shouldEncryptString" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -378,7 +448,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptionWorkWithBigText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="encrypt-cesar-keyword" />
       <extension name="coverage">
         <pattern>
@@ -388,26 +458,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.grayen.encryption.cesar.keyword.implementation" />
       <option name="MAIN_CLASS_NAME" value="com.grayen.encryption.cesar.keyword.implementation.CesarEncryptionKeywordImplementationTest" />
-      <option name="METHOD_NAME" value="shouldEncryptionWorkWithBigText" />
+      <option name="METHOD_NAME" value="shouldMakeCorrectEncryptionTable" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldDecryptString" />
-      <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptString" />
       <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptionWork" />
-      <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptionWorkWithBigText" />
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" />
+      <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest" />
+      <item itemvalue="JUnit.CesarEncryptionHackFrequencyCharactersTest.shouldMakeCorrectEncryptionTable" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CesarEncryptionHackFrequencyCharactersTest.shouldMakeCorrectEncryptionTable" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptionWorkWithBigText" />
+        <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest" />
         <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptionWork" />
-        <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldDecryptString" />
-        <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldEncryptString" />
+        <item itemvalue="JUnit.CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" />
       </list>
     </recent_temporary>
   </component>
@@ -422,21 +492,17 @@
       <option name="presentableId" value="Default" />
       <updated>1536525980320</updated>
     </task>
+    <task id="LOCAL-00001" summary="early beta test">
+      <created>1536785851212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536785851212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldDecryptString - 2018.09.12 at 22h 57m 23s.xml">
-      <configuration name="CesarEncryptionKeywordImplementationTest.shouldDecryptString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldMakeCorrectEncryptionTable - 2018.09.12 at 23h 02m 40s.xml">
-      <configuration name="CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldMakeCorrectEncryptionTable - 2018.09.12 at 23h 11m 42s.xml">
-      <configuration name="CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldEncryptString - 2018.09.12 at 23h 11m 56s.xml">
-      <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptString" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CesarEncryptionKeywordImplementationTest_shouldEncryptString - 2018.09.12 at 23h 12m 30s.xml">
       <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptString" configurationId="JUnit" />
     </history-entry>
@@ -455,6 +521,18 @@
     <history-entry file="CesarEncryptionKeywordImplementationTest_shouldEncryptionWorkWithBigText - 2018.09.12 at 23h 19m 39s.xml">
       <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptionWorkWithBigText" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldMakeCorrectEncryptionTable - 2018.09.13 at 13h 13m 11s.xml">
+      <configuration name="CesarEncryptionKeywordImplementationTest.shouldMakeCorrectEncryptionTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldEncryptionWork - 2018.09.13 at 13h 13m 35s.xml">
+      <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptionWork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CesarEncryptionKeywordImplementationTest_shouldEncryptionWork - 2018.09.13 at 13h 14m 07s.xml">
+      <configuration name="CesarEncryptionKeywordImplementationTest.shouldEncryptionWork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CesarEncryptionKeywordImplementationTest - 2018.09.13 at 14h 49m 21s.xml">
+      <configuration name="CesarEncryptionKeywordImplementationTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -470,15 +548,16 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32893288" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32893288" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893288" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32893288" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32893288" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -492,21 +571,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="early beta test" />
+    <option name="LAST_COMMIT_MESSAGE" value="early beta test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeywordFabric.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/BiFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
@@ -528,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeyword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
@@ -545,27 +619,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/settings">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="63" column="83" lean-forward="true" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="1005" column="19" selection-start-line="1005" selection-start-column="19" selection-end-line="1005" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
@@ -575,27 +632,87 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/messageInvert.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHackFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="138">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="228" column="29" selection-start-line="228" selection-start-column="29" selection-end-line="228" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="302" column="16" selection-start-line="302" selection-start-column="16" selection-end-line="302" selection-end-column="16" />
+          <folding>
+            <element signature="e#8248#8249#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="540" column="53" lean-forward="true" selection-start-line="540" selection-start-column="47" selection-end-line="540" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/message.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeyword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+        <state relative-caret-position="46">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/source/message.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/CesarEncryptionKeywordFabric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="52" lean-forward="true" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -606,10 +723,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hacked/message.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="49" />
+        <state>
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/source/message.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharacters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/message.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-end-column="69600" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

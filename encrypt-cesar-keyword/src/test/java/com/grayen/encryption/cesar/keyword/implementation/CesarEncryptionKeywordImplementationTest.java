@@ -24,7 +24,7 @@ public class CesarEncryptionKeywordImplementationTest {
     }
 
     private Map<String,String> getExpectedEncryptionTable() {
-        String needToParse = "A=X;B=Y;C=Z;D=.;E=,;F=D;G=I;H=P;I=L;J=O;K=M;L=A;M=T;N=B;O=C;P=E;Q=F;R=G;S=H;T=J;U=K;V=N;W=Q;X=R;Y=S;Z=U;.=V;,=W";
+        String needToParse = "A=V;B=W;C=X;D=Y;E=Z;F=D;G=I;H=P;I=L;J=O;K=M;L=A;M=T;N=B;O=C;P=E;Q=F;R=G;S=H;T=J;U=K;V=N;W=Q;X=R;Y=S;Z=U";
         String[] tableEntries = needToParse.split(";");
         Map<String,String> encryptionTable = new HashMap<>();
 
@@ -52,21 +52,11 @@ public class CesarEncryptionKeywordImplementationTest {
     @Test
     public void shouldEncryptionWork() {
         String sourceText = "SEND MORE MONEY";
-        String encryptedText = "H,B. TCG, TCB,S";
+        String encryptedText = "HZBY TCGZ TCBZS";
         String keyWord = "DIPLOMAT";
 
         Assert.assertEquals(encryptedText, encryptSystem.encrypt(sourceText, keyWord));
         Assert.assertEquals(sourceText, encryptSystem.decrypt(encryptedText, keyWord));
     }
 
-
-    @Test
-    public void shouldEncryptionWorkWithBigText() {
-        String sourceText = "SEND MORE MONEY";
-        String encryptedText = "H,B. TCG, TCB,S";
-        String keyWord = "DIPLOMAT";
-
-        Assert.assertEquals(encryptedText, encryptSystem.encrypt(sourceText, keyWord));
-        Assert.assertEquals(sourceText, encryptSystem.decrypt(encryptedText, keyWord));
-    }
 }
