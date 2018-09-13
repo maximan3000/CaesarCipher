@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fba9dd5-6f08-45c4-afb2-0b54d2dfb2b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/CesarEncryptionHackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionAbstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharacters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grayen/encryption/cesar/keyword/parameters/DefaultEncryptionParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/source/message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/source/message.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/implementation/CesarEncryptionKeywordImplementationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grayen/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grayen/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/message.txt" afterDir="false" />
     </list>
@@ -33,7 +22,7 @@
     <session id="885371802">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="2" />
@@ -43,14 +32,14 @@
         <counts>
           <entry key="java" value="58" />
           <entry key="settings" value="1" />
-          <entry key="txt" value="21" />
+          <entry key="txt" value="22" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="58" />
-          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -58,14 +47,14 @@
         <counts>
           <entry key="dummy" value="75" />
           <entry key="java" value="4138" />
-          <entry key="txt" value="16" />
+          <entry key="txt" value="32" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4138" />
-          <entry key="PLAIN_TEXT" value="91" />
+          <entry key="PLAIN_TEXT" value="107" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -97,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+            <state relative-caret-position="300">
+              <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -350,7 +339,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536843198777" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536843258072" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
   </component>
@@ -499,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536785851212</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hack need fix">
+      <created>1536843408475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536843408475</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -538,7 +534,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -549,11 +545,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32893288" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39933994" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893288" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32893288" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32893288" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32893288" />
@@ -572,8 +568,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="early beta test" />
-    <option name="LAST_COMMIT_MESSAGE" value="early beta test" />
+    <MESSAGE value="hack need fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="hack need fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -774,14 +773,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted/message.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="18" selection-end-column="69600" />
+          <caret column="63" lean-forward="true" selection-end-column="69600" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/grayen/encryption/cesar/keyword/hack/implementation/CesarEncryptionHackFrequencyCharactersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        <state relative-caret-position="300">
+          <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.grayen.encryption.cesar.keyword.system.encrypt.implementation.CesarEncryptionKeywordImplementationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
