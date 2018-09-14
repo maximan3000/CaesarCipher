@@ -4,6 +4,7 @@ import com.grayen.encryption.cesar.keyword.parameters.DefaultEncryptionParameter
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collector;
 
 public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstract {
 
@@ -22,12 +23,21 @@ public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstrac
 
         fillEncryptionTableWithAlphabet(securedKeyword, offset);
 
-        return getMapFromPrepareEncryptionTable();
+        Map<String,String> encryptionTable = getMapFromPrepareEncryptionTable();
+
+        setEncryptionTableCaseInsensitive(encryptionTable);
+
+        return encryptionTable;
     }
 
     private String secureKeyword(String keyword) {
-        //TODO из keyword нужно исключить все повторяющееся и ненужное
-        return keyword.toUpperCase().replaceAll("[^A-Z]","");
+        String distinctCharactersKeyword = keyword
+                .codePoints()
+                .distinct()
+                .boxed()
+                .collect(Collector.of(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append, StringBuilder::toString));
+
+        return distinctCharactersKeyword.toUpperCase().replaceAll("[^A-Z]","");
     }
 
     private void fillEncryptionTableWithKeyword(String keyword, Integer offset) {
@@ -54,5 +64,13 @@ public class CesarEncryptionKeywordImplementation extends CesarEncryptionAbstrac
             encryptionTable.put(DefaultEncryptionParameters.alphabetAscending.substring(i, i+1), prepareEncryptionTable[i]);
         }
         return encryptionTable;
+    }
+
+    private void setEncryptionTableCaseInsensitive(Map<String,String> encryptionTable) {
+        Map<String,String> lowerCaseTable = new HashMap<>();
+        for (Map.Entry<String,String> entry : encryptionTable.entrySet()) {
+            lowerCaseTable.put(entry.getKey().toLowerCase(), entry.getValue().toLowerCase());
+        }
+        encryptionTable.putAll(lowerCaseTable);
     }
 }

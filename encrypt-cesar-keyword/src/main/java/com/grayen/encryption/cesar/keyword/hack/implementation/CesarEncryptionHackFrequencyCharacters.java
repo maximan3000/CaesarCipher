@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class CesarEncryptionHackFrequencyCharacters extends CesarEncryptionAbstract implements CesarEncryptionHack {
 
+    //frequency get from https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82
     private static List<String> defaultCharactersWithFrequencyDescending = Arrays.asList(
             "E", "T", "A", "O", "I", "N", "S", "H", "R", "D", "L", "C", "U", "M", "W", "F", "G", "Y", "P", "B", "V", "K", "X", "J", "Q", "Z"
     );
@@ -17,15 +18,17 @@ public class CesarEncryptionHackFrequencyCharacters extends CesarEncryptionAbstr
 
         Map<String, Integer> countCharacterTable = parseCharacterArray(characters);
         Map<String, Float> frequencyCharacterTable = getFrequencyFromCount(countCharacterTable);
-        Map<String, String> hackedDecryptionTable = getEncryptionTableFromFrequencyTable(frequencyCharacterTable);
-        return hackedDecryptionTable;
+        Map<String, String> hackedEncryptionTable = getEncryptionTableFromFrequencyTable(frequencyCharacterTable);
+        setEncryptionTableCaseInsensitive(hackedEncryptionTable);
+
+        return hackedEncryptionTable;
     }
 
     private Map<String, Integer> parseCharacterArray(char[] characters) {
         Map<String, Integer> countCharacterTable = new HashMap();
 
         for (char character : characters) {
-            String characterSymbol = String.valueOf(character);
+            String characterSymbol = String.valueOf(character).toUpperCase();
 
             if ( !DefaultEncryptionParameters.alphabetAscending.contains(characterSymbol) )
                 continue;
@@ -65,22 +68,34 @@ public class CesarEncryptionHackFrequencyCharacters extends CesarEncryptionAbstr
                 .collect(Collectors.toList());
 
         Map<String, String> hackedDecryptionTable = new HashMap<>();
+        LinkedList<String> lastCharacters = new LinkedList<>( defaultCharactersWithFrequencyDescending );
 
         Integer index = 0;
         for (; index < entriesWithFrequencyDescending.size(); index++ ) {
-                hackedDecryptionTable.put(
-                        entriesWithFrequencyDescending.get(index).getKey(),
-                        defaultCharactersWithFrequencyDescending.get(index)
-                );
+            String sourceCharacter = entriesWithFrequencyDescending.get(index).getKey();
+            String encryptedCharacter = defaultCharactersWithFrequencyDescending.get(index);
+
+            hackedDecryptionTable.put(sourceCharacter, encryptedCharacter);
+
+            lastCharacters.removeFirstOccurrence(sourceCharacter);
         }
-        for (; index < entriesWithFrequencyDescending.size(); index++ ) {
-            hackedDecryptionTable.put(
-                    defaultCharactersWithFrequencyDescending.get(index),
-                    defaultCharactersWithFrequencyDescending.get(index)
-            );
+
+        for (; index < defaultCharactersWithFrequencyDescending.size(); index++ ) {
+            String sourceCharacter = lastCharacters.getFirst();
+            String encryptedCharacter = defaultCharactersWithFrequencyDescending.get(index);
+
+            hackedDecryptionTable.put(sourceCharacter, encryptedCharacter);
         }
 
         return hackedDecryptionTable;
+    }
+
+    private void setEncryptionTableCaseInsensitive(Map<String,String> encryptionTable) {
+        Map<String,String> lowerCaseTable = new HashMap<>();
+        for (Map.Entry<String,String> entry : encryptionTable.entrySet()) {
+            lowerCaseTable.put(entry.getKey().toLowerCase(), entry.getValue().toLowerCase());
+        }
+        encryptionTable.putAll(lowerCaseTable);
     }
 
 }

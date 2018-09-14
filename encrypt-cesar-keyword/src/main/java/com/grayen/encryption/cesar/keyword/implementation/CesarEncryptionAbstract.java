@@ -48,8 +48,10 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
     }
 
     private String convertTextWithEncryptionTable(String sourceText, Map<String, String> encryptionTable) {
-        char[] sourceCharacters = sourceText.toCharArray();
+        String securedText = secureText(sourceText);
+
         StringBuilder encryptedText = new StringBuilder();
+        char[] sourceCharacters = securedText.toCharArray();
 
         for (char currentCharacter : sourceCharacters) {
             encryptedText.append(convertCharacterWithEncryptionTable(currentCharacter, encryptionTable));
@@ -58,11 +60,17 @@ public abstract class CesarEncryptionAbstract implements CesarEncryptionKeyword 
         return encryptedText.toString();
     }
 
+    private String secureText(String text) {
+        return text;
+    }
+
     private String convertCharacterWithEncryptionTable(char character, Map<String, String> encryptionTable) {
         String characterToEncode = Character.toString(character);
-        String encryptedCharacter = (String) encryptionTable.get(characterToEncode);
-        encryptedCharacter = encryptedCharacter == null ? " " : encryptedCharacter;
-        return encryptedCharacter;
+        if ( encryptionTable.containsKey(characterToEncode) ) {
+            String encryptedCharacter = encryptionTable.get(characterToEncode);
+            return encryptedCharacter;
+        }
+        return characterToEncode;
     }
 
     protected abstract Map<String, String> getEncryptionTable(String keyword, Integer offset);

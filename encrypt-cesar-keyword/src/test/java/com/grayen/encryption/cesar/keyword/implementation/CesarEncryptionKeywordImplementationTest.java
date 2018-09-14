@@ -24,7 +24,9 @@ public class CesarEncryptionKeywordImplementationTest {
     }
 
     private Map<String,String> getExpectedEncryptionTable() {
-        String needToParse = "A=V;B=W;C=X;D=Y;E=Z;F=D;G=I;H=P;I=L;J=O;K=M;L=A;M=T;N=B;O=C;P=E;Q=F;R=G;S=H;T=J;U=K;V=N;W=Q;X=R;Y=S;Z=U";
+        String needToParse =
+                "A=V;B=W;C=X;D=Y;E=Z;F=D;G=I;H=P;I=L;J=O;K=M;L=A;M=T;N=B;O=C;P=E;Q=F;R=G;S=H;T=J;U=K;V=N;W=Q;X=R;Y=S;Z=U;"+
+                "a=v;b=w;c=x;d=y;e=z;f=d;g=i;h=p;i=l;j=o;k=m;l=a;m=t;n=b;o=c;p=e;q=f;r=g;s=h;t=j;u=k;v=n;w=q;x=r;y=s;z=u";
         String[] tableEntries = needToParse.split(";");
         Map<String,String> encryptionTable = new HashMap<>();
 
