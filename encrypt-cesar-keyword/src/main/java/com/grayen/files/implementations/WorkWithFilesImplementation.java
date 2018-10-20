@@ -2,56 +2,59 @@ package com.grayen.files.implementations;
 
 import com.grayen.files.WorkWithFiles;
 
-import java.io.*;
-import java.lang.reflect.Array;
+import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class WorkWithFilesImplementation implements WorkWithFiles {
-
-    String pathToDirectory;
+    private String pathToDirectory;
 
     public WorkWithFilesImplementation(String pathToDirectory) {
         this.pathToDirectory = pathToDirectory;
     }
 
     @Override
-    public String getFileContent(String fileName) throws Exception {
-        File sourceFile = new File(pathToDirectory+fileName);
-        InputStream stream = new FileInputStream(sourceFile);
+    public String getFileContent(String fileName) throws IOException {
+        Path sourceFile = FileSystems.getDefault().getPath(pathToDirectory + fileName);
 
-        String fileContent;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
-             fileContent =  reader.lines().collect(Collectors.joining("\n"));
-        }
+        String fileContent = Files
+                .lines(sourceFile, StandardCharsets.UTF_8)
+                .collect(Collectors.joining("\n"));
 
         return fileContent;
     }
 
     @Override
-    public void putNewFileContent(String fileName, String fileContent) throws Exception {
-        File destinationFile = new File(pathToDirectory+fileName);
-        destinationFile.createNewFile();
+    public String[] getFileLines(String fileName) throws IOException {
+        Path sourceFile = FileSystems.getDefault().getPath(pathToDirectory + fileName);
 
-        try (BufferedWriter writer = new BufferedWriter( new FileWriter( destinationFile ) )) {
-            writer.write(fileContent);
-        }
+        List<String> fileLines = Files.readAllLines(sourceFile, StandardCharsets.UTF_8);
+        String[] fileLinesArray = fileLines.toArray(new String[0]);
+
+        return fileLinesArray;
+    }
+
+    @Override
+    public void putNewFileContent(String fileName, String fileContent) throws Exception {
+        Path destinationFile = FileSystems.getDefault().getPath(pathToDirectory + fileName);
+
+        if ( !Files.exists(destinationFile) )
+            Files.createFile(destinationFile);
+
+        Files.write(destinationFile, fileContent.getBytes());
     }
 
     @Override
     public List<String> getListFiles() {
         File directory = new File(pathToDirectory);
-        File[] files = directory.listFiles();
+        String[] files = directory.list();
+        List<String> filesNames = Arrays.asList( files );
 
-        List<String> filesNames = new LinkedList<>();
-
-        for (File file : files) {
-            filesNames.add(file.getName());
-        }
         return filesNames;
     }
 }
