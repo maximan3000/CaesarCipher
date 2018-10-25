@@ -25,7 +25,7 @@ public class HackParameters {
     /**
      * Список букв англтийского алфавита, расположенный в порядке уменьшения частоты использования.
      * Взят из википедии:
-     * https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82
+     * https://ru.wikipedia.org/wiki/Английский_алфавит
      */
     public static final List<String> charactersWithFrequencyDescending = Arrays.asList(
         "E", "T", "A", "O", "I", "N", "S", "H", "R", "D", "L", "C", "U", "M", "W", "F", "G", "Y", "P", "B", "V", "K", "X", "J", "Q", "Z"

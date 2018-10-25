@@ -4,18 +4,13 @@ import com.grayen.encryption.cesar.keyword.hack.init.HackParameters;
 
 import java.util.HashSet;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 class DictionaryForHacking {
-    private static Integer minWordLength = HackParameters.minWordLength;
-    private static Integer maxWordsDistance = HackParameters.maxWordsDistance;
-    private static Pattern wordPattern = HackParameters.wordPattern;
-
     private String[] sourceOfDictionary;
 
     public static String findClosestWordInDictionary(String word, HashSet<String> wordsDictionary) {
         String closestWord = "";
-        Integer closestWordDistance = minWordLength;
+        Integer closestWordDistance = HackParameters.minWordLength;
 
         for (String dictionaryWord : wordsDictionary) {
             if (dictionaryWord.length() == word.length()) {
@@ -29,7 +24,7 @@ class DictionaryForHacking {
             }
         }
 
-        if ( closestWordDistance <= maxWordsDistance )
+        if ( closestWordDistance <= HackParameters.maxWordsDistance )
             return closestWord;
 
         return word;
@@ -39,14 +34,27 @@ class DictionaryForHacking {
         Integer difference = 0;
 
         for (int i = 0; i < word1.length(); i++) {
-            if ( word1.charAt(i) != word2.charAt(i) )
+            String character1 = String.valueOf(word1.charAt(i));
+            String character2 = String.valueOf(word2.charAt(i));
+
+            if  (!character1.equals(character2)) {
                 difference++;
-            //TODO переместить в другое место и переписать (тут неправильно) (суть - если 2 буквы находятся по частоте далеко друг от друга, то вероятнее всего 2 данных слова - разные)
-            /*if ( Math.abs( word1.charAt(i) - word2.charAt(i) ) > this.maxSymbolDistance)
-                return word1.length();*/
+                if (getCharactersDistance(character1, character2) > HackParameters.maxSymbolDistance) {
+                    //если частота символов сильно отличается, то считаем слова разными,
+                    // a значит из distance максимальна и равна длиине слова
+                    return word1.length();
+                }
+            }
         }
 
         return difference;
+    }
+
+    private static Integer getCharactersDistance(String character1, String character2) {
+        Integer index1 = HackParameters.charactersWithFrequencyDescending.indexOf(character1);
+        Integer index2 = HackParameters.charactersWithFrequencyDescending.indexOf(character2);
+
+        return Math.abs(index1 - index2);
     }
 
     public static HashSet<String> getDictionary(String[] sourceOfDictionary) {
@@ -70,7 +78,7 @@ class DictionaryForHacking {
 
     private HashSet<String> findAllWords(String stringWithWords) {
         HashSet<String> wordsSet = new HashSet<>();
-        Matcher matcher = wordPattern.matcher(stringWithWords);
+        Matcher matcher = HackParameters.wordPattern.matcher(stringWithWords);
 
         while (matcher.find()) {
             String word = matcher.group();

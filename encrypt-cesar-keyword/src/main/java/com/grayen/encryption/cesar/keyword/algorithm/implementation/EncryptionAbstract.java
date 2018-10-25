@@ -9,12 +9,12 @@ import java.util.Map;
 public abstract class EncryptionAbstract implements CesarEncryptionKeyword {
     @Override
     public String encrypt(String sourceText) {
-        return encrypt(sourceText, EncryptionParameters.keyword);
+        return encrypt(sourceText, EncryptionParameters.keywordDefault);
     }
 
     @Override
     public String encrypt(String sourceText, String keyword) {
-        return encrypt(sourceText, keyword, EncryptionParameters.offset);
+        return encrypt(sourceText, keyword, EncryptionParameters.offsetDefault);
     }
 
     @Override
@@ -24,11 +24,11 @@ public abstract class EncryptionAbstract implements CesarEncryptionKeyword {
     }
 
     public String decrypt(String sourceText) {
-        return decrypt(sourceText, EncryptionParameters.keyword);
+        return decrypt(sourceText, EncryptionParameters.keywordDefault);
     }
 
     public String decrypt(String sourceText, String keyword) {
-        return decrypt(sourceText, keyword, EncryptionParameters.offset);
+        return decrypt(sourceText, keyword, EncryptionParameters.offsetDefault);
     }
 
     public String decrypt(String sourceText, String keyword, Integer offset) {
