@@ -14,12 +14,12 @@
 
 Оставшиеся буквы алфавита подстановки записываются после ключевого слова в алфавитном порядке:
 
-![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image1.png?raw=true)
+![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image2.png?raw=true)
 
 
 Теперь мы имеем подстановку для каждой буквы произвольного сообщения. Исходное сообщение SEND MORE MONEY, шифруется как HZBY TCGZ TCBZS. Следует отметить, что требование о различии всех букв ключевого слова не обязательно. Можно просто записать ключевое слово (или фразу) без повторения одинаковых букв. Например, ключевая фраза КАК ДЫМ ОТЕЧЕСТВА НАМ СЛАДОК И ПРИЯТЕН и число k = 3 порождают следующую таблицу подстановок:
 
-![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image1.png?raw=true)
+![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image3.png?raw=true)
 
 
 Несомненным достоинством системы Цезаря с ключевым словом является то, что количество возможных ключевых слов практически неисчерпаемо. Недостатком этой системы является возможность взлома шифрованного текста на основе анализа частот появления букв.
