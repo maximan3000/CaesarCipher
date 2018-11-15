@@ -34,12 +34,24 @@ public class HackAbstractTest extends HackAbstract {
         Map<String, String> source = new HashMap<>();
         source.put("a", "b");
         source.put("g", "c");
+        source.put("e", "e");
+        source.put("h", "h");
 
-        Map<String, String> expected = new HashMap<>();
-        expected.put("a", "c");
-        expected.put("g", "b");
+        Map<String, String> expected1 = new HashMap<>();
+        expected1.put("a", "c");
+        expected1.put("g", "b");
+        expected1.put("e", "e");
+        expected1.put("h", "h");
 
-        Assert.assertEquals(expected, replaceSymbolInEncryptionTable(source, "b", "c"));
+
+        Map<String, String> expected2 = new HashMap<>();
+        expected2.put("a", "c");
+        expected2.put("g", "b");
+        expected2.put("e", "h");
+        expected2.put("h", "e");
+
+        Assert.assertEquals(expected1, replaceSymbolInEncryptionTable(source, "b", "c"));
+        Assert.assertEquals(expected2, replaceSymbolInEncryptionTable(source, "e", "h"));
     }
 
     @Test

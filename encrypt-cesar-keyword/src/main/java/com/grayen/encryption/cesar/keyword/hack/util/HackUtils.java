@@ -13,4 +13,12 @@ public class HackUtils {
         return null;
     }
 
+    public static Boolean checkIfKeySameWithValue(String key, Map map) {
+        return key.equals(map.get(key));
+    }
+
+    public static Boolean containsKeyWithValue(String key, String value, Map map) {
+        return (map.containsKey(key) && map.get(key).equals(value));
+    }
+
 }

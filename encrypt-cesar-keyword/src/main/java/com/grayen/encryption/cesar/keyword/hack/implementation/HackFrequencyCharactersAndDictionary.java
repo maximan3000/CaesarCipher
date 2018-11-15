@@ -2,12 +2,21 @@ package com.grayen.encryption.cesar.keyword.hack.implementation;
 
 import com.grayen.encryption.cesar.keyword.hack.CesarEncryptionHack;
 import com.grayen.encryption.cesar.keyword.hack.init.HackParameters;
+import com.grayen.encryption.cesar.keyword.hack.util.HackUtils;
 
 import java.util.*;
 import java.util.regex.Matcher;
 
+import static com.grayen.encryption.cesar.keyword.hack.util.HackUtils.checkIfKeySameWithValue;
+
 public class HackFrequencyCharactersAndDictionary extends HackAbstract implements CesarEncryptionHack {
     private HashSet<String> dictionary;
+
+    @Override
+    public String hack() {
+        correctEncryptionTableWithDictionary();
+        return decryptTextWithEncryptionTable(this.encryptedText);
+    }
 
     public HackFrequencyCharactersAndDictionary(String encryptedText, String[] sourceOfDictionary) {
         super(encryptedText);
@@ -15,12 +24,7 @@ public class HackFrequencyCharactersAndDictionary extends HackAbstract implement
         correctEncryptionTableWithDictionary();
     }
 
-    @Override
-    protected Map<String, String> getHackedEncryptionTable(String encryptedText) {
-        return FrequencyCharactersForHacking.getHackedEncryptionTable(encryptedText);
-    }
-
-    private void correctEncryptionTableWithDictionary() {
+    public void correctEncryptionTableWithDictionary() {
         Matcher wordsMatches = HackParameters.wordPattern.matcher(encryptedText);
 
         while (wordsMatches.find()) {
@@ -30,6 +34,11 @@ public class HackFrequencyCharactersAndDictionary extends HackAbstract implement
 
             correctEncryptionTableWithDecryptedWordAndDictionary(decryptedWord);
         }
+    }
+
+    @Override
+    protected Map<String, String> getHackedEncryptionTable(String encryptedText) {
+        return FrequencyCharactersForHacking.getHackedEncryptionTable(encryptedText);
     }
 
     private void correctEncryptionTableWithDecryptedWordAndDictionary(String decryptedWord) {

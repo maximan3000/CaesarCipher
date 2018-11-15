@@ -20,7 +20,7 @@ public class HackParameters {
      * для взлома (например, символы "e" и "x" по частоте в люьом случае сильно отстают друг от друга,
      * поэтому менять часто появляющуюся "e" на "x" не целесообразно)
      */
-    public static final Integer maxSymbolDistance = 5;
+    public static final Integer maxSymbolDistance = 6;
 
     /**
      * Список букв англтийского алфавита, расположенный в порядке уменьшения частоты использования.
@@ -36,7 +36,7 @@ public class HackParameters {
      * будет ли данное слово искаться в словаре и, соответственно, будет ли по этому слову правиться словарь дешифрации.
      * Также слова, короче данной длины в словарь вноситься не будут
      */
-    public static final Integer minWordLength = 8;
+    public static final Integer minWordLength = 6;
 
     /**
      * Шаблон, используемый системой для определения того,

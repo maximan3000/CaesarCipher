@@ -1,8 +1,11 @@
 package com.grayen.encryption.cesar.keyword.hack.implementation;
 
 import com.grayen.encryption.cesar.keyword.hack.init.HackParameters;
+import com.grayen.encryption.cesar.keyword.hack.util.HackUtils;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.regex.Matcher;
 
 class DictionaryForHacking {
@@ -32,16 +35,21 @@ class DictionaryForHacking {
 
     public static Integer getWordsDistance(String word1, String word2) {
         Integer difference = 0;
+        Map<String, String> differentLetters = new HashMap();
 
         for (int i = 0; i < word1.length(); i++) {
             String character1 = String.valueOf(word1.charAt(i));
             String character2 = String.valueOf(word2.charAt(i));
 
             if  (!character1.equals(character2)) {
-                difference++;
+                if (!HackUtils.containsKeyWithValue(character1, character2, differentLetters)) {
+                    difference++;
+                    differentLetters.put(character1, character2);
+                }
+
                 if (getCharactersDistance(character1, character2) > HackParameters.maxSymbolDistance) {
                     //если частота символов сильно отличается, то считаем слова разными,
-                    // a значит из distance максимальна и равна длиине слова
+                    // a значит их distance максимальна и равна длиине слова
                     return word1.length();
                 }
             }
