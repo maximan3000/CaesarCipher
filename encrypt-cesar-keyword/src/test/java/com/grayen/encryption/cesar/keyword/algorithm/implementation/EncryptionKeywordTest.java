@@ -23,6 +23,8 @@ public class EncryptionKeywordTest {
         String sourceText = "SEND MORE MONEY";
         String encryptedText = "HZBY TCGZ TCBZS";
 
+        String str = encryptSystem.encrypt(sourceText);
+
         Assert.assertEquals(encryptedText, encryptSystem.encrypt(sourceText));
         Assert.assertEquals(sourceText, encryptSystem.decrypt(encryptedText));
 

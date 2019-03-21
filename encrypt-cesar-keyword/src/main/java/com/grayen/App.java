@@ -9,6 +9,7 @@ import com.grayen.files.WorkWithFilesFactory;
 
 import java.io.*;
 import java.util.Scanner;
+import java.util.List;
 
 public class App {
     static final String sourceFilesPath = "src/main/resources/files/";
@@ -28,7 +29,7 @@ public class App {
         sourceFiles = WorkWithFilesFactory.getWorkWithFiles(sourceFilesPath);
 
         WorkWithFiles sourceOfDictionaryFiles = WorkWithFilesFactory.getWorkWithFiles(sourceOfDictionaryPath);
-        sourceOfDictionary = sourceOfDictionaryFiles.getFileLines("WarAndPeace.txt");
+        sourceOfDictionary = sourceOfDictionaryFiles.getFileLines("WarPeace.txt");
 
         encryption = CesarEncryptionKeywordFabric.getEncryptionSystem();
 
@@ -49,6 +50,9 @@ public class App {
         String commandName = commandData[0];
 
         switch (commandName) {
+            case "!ls":
+                executeLs();
+                break;
             case "!help":
                 executeHelp();
                 break;
@@ -64,12 +68,21 @@ public class App {
             case "!exit":
                 throw new Exception("Exit program");
             default:
-                System.out.println("No such command!");
+                System.out.println("No such command!\n");
         }
     }
 
+    private static void executeLs() {
+        List<String> ls = sourceFiles.getListFiles();
+        StringBuilder lsRes = new StringBuilder();
+        for (String file : ls) {
+            lsRes.append(file).append("\n");
+        }
+        System.out.println(lsRes.toString());
+    }
+
     private static void executeHelp() {
-        System.out.println("!help !encode path_to_file !decode path_to_file !hack path_to_file");
+        System.out.println("!ls\n!help\n!encode <file>\n!decode <file>\n!hack <file>\n");
     }
 
     private static void executeEncode(String srcFile) {
@@ -80,10 +93,10 @@ public class App {
             String encryptedFile = srcFile.replace(".txt", "-enc.txt");
             sourceFiles.putNewFileContent(encryptedFile, encryptedText);
 
-            System.out.println("Encrypted text moved to file: " + encryptedFile);
+            System.out.println("Encrypted text moved to file: " + encryptedFile + "\n");
         }
         catch (Exception ex) {
-            System.out.println(ex.toString());
+            System.out.println(ex.toString() + "\n");
         }
     }
 
@@ -95,9 +108,9 @@ public class App {
             String decryptedFile = encryptedFile.replace(".txt", "-dec.txt");
             sourceFiles.putNewFileContent(decryptedFile, decryptedText);
 
-            System.out.println("Decrypted text moved to file: " + decryptedFile);
+            System.out.println("Decrypted text moved to file: " + decryptedFile + "\n");
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            System.out.println(ex.toString() + "\n");
         }
     }
 
@@ -109,11 +122,11 @@ public class App {
             String hackedText = hack.hack();
             String hackedFile = encryptedFile.replace(".txt", "-hack.txt");
             sourceFiles.putNewFileContent(hackedFile, hackedText);
-            System.out.println("Hacked text moved to file: " + hackedFile);
+            System.out.println("Hacked text moved to file: " + hackedFile + "\n");
 
             handHack(hack, hackedFile);
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            System.out.println(ex.toString() + "\n");
         }
 
     }
@@ -148,12 +161,12 @@ public class App {
             case "!stop":
                 throw new Exception("Exit program");
             default:
-                System.out.println("No such command!");
+                System.out.println("No such command!\n");
         }
     }
 
     private static void executeHackHelp() {
-        System.out.println("!help !swap from to !apply !stop");
+        System.out.println("!help\n!swap <from> <to>\n!apply\n!stop\n");
     }
 
     private static void executeHackSwap(String from, String to, CesarEncryptionHack hack) {
@@ -168,9 +181,9 @@ public class App {
         try {
             String hackedText = hack.hack();
             sourceFiles.putNewFileContent(hackedFile, hackedText);
-            System.out.println("Hacked text moved to file: " + hackedFile);
+            System.out.println("Hacked text moved to file: " + hackedFile + "\n");
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            System.out.println(ex.toString() + "\n");
         }
     }
 }
