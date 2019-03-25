@@ -2,7 +2,7 @@
 
 Java library for Ceasar Cipher (Keyed Caesar) that allows:
 1. Encrypt & decrypt english text
-2. Hack decrypted english text
+2. Hack encrypted english text
 
 ## Requirements
 
