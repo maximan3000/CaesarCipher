@@ -1,3 +1,0 @@
-Hello!
-This is file for testing Classes that are implements reading from files operation!
-

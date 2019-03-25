@@ -1,72 +1,86 @@
-# Решаемые задачи
+# Caesar Cipher (Keyed Caesar) java library
 
- - Создать программу шифрования – дешифрования методом Цезаря с ключевым словом для английского языка. 
- - Создать программу взлома методом, использующим анализ частоты появления букв.
+Java library for Ceasar Cipher (Keyed Caesar) that allows:
+1. Encrypt & decrypt english text
+2. Hack decrypted english text
+
+## Requirements
+
+* Java JDK 1.8 or later
+
+## Algorithm
+
+* [Read it on wikipedia.org](https://en.wikipedia.org/wiki/Caesar_cipher)
+
+## Usage
+
+### Encrypt/Decrypt text
+
+Create an encryption system instance
+```java
+import com.grayen.encryption.caesar.algorithm.Caesar;
+import com.grayen.encryption.caesar.algorithm.implementation.CaesarFabric;
+
+Caesar encryption = CaesarFabric.getEncryptionSystem();
+```
+
+Encrypt text using your keywords and offset or it's default values
+```java
+String textToEncrypt = "Text need to encrypt";
+
+//String encryptedText1 = encryption.encrypt(textToEncrypt);
+//String encryptedText2 = encryption.encrypt(textToEncrypt, "keyword");
+//String encryptedText3 = encryption.encrypt(textToEncrypt, 5);
+String encryptedText4 = encryption.encrypt(textToEncrypt, "keyword", 5);
+```
+
+Decrypt with the same way
+```java
+String textToDecrypt = "Xcyx pccb xq cpauwsx";
+
+//String encryptedText1 = encryption.decrypt(sourceText);
+//String encryptedText2 = encryption.decrypt(sourceText, "keyword");
+//String encryptedText3 = encryption.decrypt(sourceText, 5);
+String encryptedText4 = encryption.decrypt(textToDecrypt, "keyword", 5);
+```
+
+### Hack text
+
+Hack system uses dictioanry with english words to improve hacking quality.
+So you need to create string array with many words.
+To do that, download large book with .txt extention and parse it to string[].
 
 
-## Алгоритм шифрования Цезаря
+```java
+import java.nio.file.FileSystems;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Files;
 
-Система шифрования Цезаря с ключевым словом является одноалфавитной системой подстановки. Особенностью этой системы является использование ключевого слова для смещения и изменения порядка символов в алфавите подстановки. Выберем некоторое число k, 0 < k < 25, и слово или короткую фразу в качестве ключевого слова. Желательно, чтобы все буквы ключевого слова были различными. Пусть выбраны слово DIPLOMAT в качестве ключевого слова и число k = 5. Ключевое слово записывается под буквами алфавита, начиная с буквы, числовой код которой совпадает с выбранным числом k:
+String encryptedText = "Xcyx pccb xq cpauwsx";
 
+Path sourceFile = FileSystems.getDefault().getPath("BigBook.txt");
+List<String> fileLines = Files.readAllLines(sourceFile, StandardCharsets.UTF_8);
+String[] dictionary = fileLines.toArray(new String[0]);
+```
 
-![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image1.png?raw=true)
+Create hack system instance. 
+* Note 1: successful hack depends on encrypted text size
+* Note 2: text for dictionary should be large
+```java
+import com.grayen.encryption.caesar.hack.Hack;
+import com.grayen.encryption.caesar.hack.implementation.HackFactory;
 
+Hack hack = HackFactory.getCaesarEncryptionHack(encryptedText, dictionary);
+```
 
-Оставшиеся буквы алфавита подстановки записываются после ключевого слова в алфавитном порядке:
+Hack encrypted text
+```java
+String hackedText = hack.hack();
+```
 
-![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image2.png?raw=true)
-
-
-Теперь мы имеем подстановку для каждой буквы произвольного сообщения. Исходное сообщение SEND MORE MONEY, шифруется как HZBY TCGZ TCBZS. Следует отметить, что требование о различии всех букв ключевого слова не обязательно. Можно просто записать ключевое слово (или фразу) без повторения одинаковых букв. Например, ключевая фраза КАК ДЫМ ОТЕЧЕСТВА НАМ СЛАДОК И ПРИЯТЕН и число k = 3 порождают следующую таблицу подстановок:
-
-![alt text](https://github.com/maximan3000/EncryptionCesarWithKey/blob/master/README-img/image3.png?raw=true)
-
-
-Несомненным достоинством системы Цезаря с ключевым словом является то, что количество возможных ключевых слов практически неисчерпаемо. Недостатком этой системы является возможность взлома шифрованного текста на основе анализа частот появления букв.
-
-
-## Алгоритм реализации шифрования
-
-Данный алгоритм шифрования реализован на стеке java/maven/junit через Intellij Idea.
-Шифрование и дешифрация производится по таблице – мапе, в которой каждый ключ и значение – шифруемый или дешифруемый символ. Чтобы закодировать или декодировать текст – берется каждый символ этого текста и, если его ключ есть в данной таблице, то он заменяется на соответствующее значение по этому ключу.
-Соответственно, для шифрования используется одна таблица, а для дешифрации – обратная, в которой каждый ключ и его значение меняются местами.
-Чтобы создать данную таблицу, берется список букв английского языка, расположенных в алфавитном порядке. И далее создается новый список, в котором:
-
- * На месте букв с индексом от index=offset располагается слово keyword, из которого убраны повторяющиеся и неиспользуемые (при кодировании) буквы;
- * После ключевого слова располагаются символы алфавита по возрастанию циклически (когда достигнут конец происходит переход к началу).
-
-Затем создается таблица дешифрации, в которой i-му элементу данного списка соответствует i-й элемент списка букв в алфавитном порядке.
-
-
-## Алгоритм реализации взлома
-
-Для совершения взлома необходимо создать таблицу шифрования без использования ключевого слова и смещения.
-
-Для этого используется 3 метода:
- * Частотный анализ;
- * Словарь;
- * Ручная замена букв.
-
-При частотном анализе берется список букв алфавита, упорядоченный по частоте их употребления. В данном случае, он брался из википедии [https://ru.wikipedia.org/wiki/Английский_алфавит]. Далее для зашифрованного текста составляется такой же список букв, предположительно используемых при шифровании, отсортированных по частоте появления. И далее создается таблица дешифрации (мапа), в которой i-му элементу из эталонного (первого) списка соответствует i-й элемент найденного списка (второго).
-
-При использовании словаря – создается уникальный словарь на основе большой книги (в данном случае, перевод книги «Война и Мир»). Далее в зашифрованном тексте для каждого слова (считается, что пробелы не зашифрованы) происходит следующее:
-
-1.	Слово декодируется по таблице, созданной частотным анализом;
-
-2.	В словаре ищется слово, наиболее близкое к данному (максимум одинаковых букв на одинаковых позициях) с длинной слова, не меньшей чем L (по умолчанию - 8). 
-Если в данном слове отличается N букв (по умолчанию - 1) и данные отличающиеся буквы близки по частоте (разность индексов в списке частот букв английского языка; по умолчанию - 5), то словарь дешифрации правится на букву, на которую отличаются два данных слова (декодированное и из словаря). 
-При правке старый ключ, указывавший ранее на отличающуюся букву (1) в декодированном слове, теперь указывает на отличающуюся букву (2) в слове из словаря, а ключ, который ранее указывал на (2) теперь указывает на (1);
-
-Далее предлагается вручную править словарь для дешифрации – указывается в консоли, какую букву на какую нужно заменить (таблица меняется как в пункте 2). При этом, дешифрация текста обновляется, а буква, замененная в таблице отмечается как актуальная и при автоматическом взломе больше не изменяется (при использовании словаря).
-
-## Рекомендации по дальнейшему усовершенствованию
-
-Для шифрования:
-1.	Использовать повторное шифрование (дважды и более раз зашифровывать и расшифровывать текст);
-2.	Зашифровывать также и другие символы помимо букв;
-3.	Использовать разные таблицы шифрования для разных участков текста.
-
-Для взлома:
-1.	Можно учитывать то, что кодируются не символы;
-2.	Можно составлять таблицы дешифрации для каждого блока текста, что позволит иногда обойти пункт 3 рекомендации для шифрования;
-3.	Производить коррекцию таблицы дешифрации текста методами словаря несколько раз.
+If it's need, correct hacked text with hands and hack the text again
+```java
+hack.correctEncryptionTableWithHand(from, to);
+String hackedText = hack.hack();
+```
