@@ -1,0 +1,1 @@
+This is output; random value is -> 0.6524529261435086
