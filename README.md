@@ -1,8 +1,9 @@
 # Caesar Cipher (Keyed Caesar) java library
 
-Java library for Ceasar Cipher (Keyed Caesar) that allows:
-1. Encrypt & decrypt english text
-2. Hack encrypted english text
+Java library for Ceasar Cipher (Keyed Caesar) that can:
+
+1. Encrypt & decrypt english text using keyword and keyword offset (shift)
+2. Hack encrypted english text using frequency of letters and dictionary of words
 
 ## Requirements
 
