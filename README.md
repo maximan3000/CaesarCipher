@@ -46,20 +46,14 @@ Encrypt text using your keywords and offset or it's default values
 ```java
 String textToEncrypt = "Text need to encrypt";
 
-//String encryptedText1 = encryption.encrypt(textToEncrypt);
-//String encryptedText2 = encryption.encrypt(textToEncrypt, "keyword");
-//String encryptedText3 = encryption.encrypt(textToEncrypt, 5);
-String encryptedText4 = encryption.encrypt(textToEncrypt, "keyword", 5);
+String encryptedText = encryption.encrypt(textToEncrypt, "keyword", 5);
 ```
 
 Decrypt with the same way
 ```java
 String textToDecrypt = "Xcyx pccb xq cpauwsx";
 
-//String encryptedText1 = encryption.decrypt(sourceText);
-//String encryptedText2 = encryption.decrypt(sourceText, "keyword");
-//String encryptedText3 = encryption.decrypt(sourceText, 5);
-String encryptedText4 = encryption.decrypt(textToDecrypt, "keyword", 5);
+String encryptedText = encryption.decrypt(textToDecrypt, "keyword", 5);
 ```
 
 #### Hack text
