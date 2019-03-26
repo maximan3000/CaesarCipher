@@ -12,14 +12,24 @@ package com.grayen.encryption.caesar.algorithm;
 public interface Caesar {
     /**
      * @see Caesar#encrypt(String, String, Integer)
+     * @param sourceText Text you want to encrypt
+     * @return Encrypted text
      */
     String encrypt(String sourceText);
+
     /**
      * @see Caesar#encrypt(String, String, Integer)
+     * @param sourceText Text you want to encrypt
+     * @param keyword Keyword used in encryption
+     * @return Encrypted text
      */
     String encrypt(String sourceText, String keyword);
+
     /**
      * @see Caesar#encrypt(String, String, Integer)
+     * @param sourceText Text you want to encrypt
+     * @param offset Offset of the keyword used in encryption
+     * @return Encrypted text
      */
     String encrypt(String sourceText, Integer offset);
     /**
@@ -35,14 +45,24 @@ public interface Caesar {
 
     /**
      * @see Caesar#decrypt(String, String, Integer)
+     * @param sourceText Text you want to decrypt
+     * @return Decrypted text
      */
     String decrypt(String sourceText);
+
     /**
      * @see Caesar#decrypt(String, String, Integer)
+     * @param sourceText Text you want to decrypt
+     * @param keyword Keyword used in encryption
+     * @return Decrypted text
      */
     String decrypt(String sourceText, String keyword);
+
     /**
      * @see Caesar#decrypt(String, String, Integer)
+     * @param sourceText Text you want to decrypt
+     * @param offset Offset of the keyword used in encryption
+     * @return Decrypted text
      */
     String decrypt(String sourceText, Integer offset);
     /**

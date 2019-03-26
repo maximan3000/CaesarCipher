@@ -14,7 +14,7 @@ public class HackParameters {
     /**
      * How many different letters hacked word and word in the dictionary could have.
      * If there is more different letters, we think that there are different words.
-     * (for example, "algorithm" and "algorithq" are the same if maximum difference >=1)
+     * (for example, "algorithm" and "algorithq" are the same if maximum difference more than 1)
      */
     public static Integer maxWordsDistance = 1;
 

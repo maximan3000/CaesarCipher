@@ -31,8 +31,7 @@
     <dependency>
       <groupId>com.github.maximan3000</groupId>
       <artifactId>caesar-cipher</artifactId>
-      <version>1.0.1</version>
-      <scope>compile</scope>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
 
