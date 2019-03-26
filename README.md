@@ -12,7 +12,7 @@ Java library for Ceasar Cipher (Keyed Caesar) that can:
 
 ## Installation
 
-### Maven users
+#### Maven users
 ```
 <dependency>
   <groupId>com.github.maximan3000</groupId>
@@ -21,7 +21,7 @@ Java library for Ceasar Cipher (Keyed Caesar) that can:
 </dependency>
 ```
 
-### Gradle Groovy DSL
+#### Gradle Groovy DSL
 ```
 implementation 'com.github.maximan3000:caesar-cipher:1.0.0'
 ```
@@ -32,7 +32,7 @@ implementation 'com.github.maximan3000:caesar-cipher:1.0.0'
 
 ## Usage
 
-### Encrypt/Decrypt text
+#### Encrypt/Decrypt text
 
 Create an encryption system instance
 ```java
@@ -62,7 +62,7 @@ String textToDecrypt = "Xcyx pccb xq cpauwsx";
 String encryptedText4 = encryption.decrypt(textToDecrypt, "keyword", 5);
 ```
 
-### Hack text
+#### Hack text
 
 Hack system uses dictioanry with english words to improve hacking quality.
 So you need to create string array with many words.
