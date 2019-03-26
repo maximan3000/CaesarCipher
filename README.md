@@ -53,7 +53,7 @@ Decrypt with the same way
 ```java
 String textToDecrypt = "Xcyx pccb xq cpauwsx";
 
-String encryptedText = encryption.decrypt(textToDecrypt, "keyword", 5);
+String decryptedText = encryption.decrypt(textToDecrypt, "keyword", 5);
 ```
 
 #### Hack text
@@ -68,8 +68,6 @@ import java.nio.file.FileSystems;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Files;
-
-String encryptedText = "Xcyx pccb xq cpauwsx";
 
 Path sourceFile = FileSystems.getDefault().getPath("BigBook.txt");
 List<String> fileLines = Files.readAllLines(sourceFile, StandardCharsets.UTF_8);
@@ -93,6 +91,6 @@ String hackedText = hack.hack();
 
 If it's need, correct hacked text with hands and hack the text again
 ```java
-hack.correctEncryptionTableWithHand(from, to);
+hack.correctEncryptionTableWithHand("a", "x");
 String hackedText = hack.hack();
 ```
