@@ -10,6 +10,22 @@ Java library for Ceasar Cipher (Keyed Caesar) that can:
 
 * Java JDK 1.8 or later
 
+## Installation
+
+### Maven users
+```
+<dependency>
+  <groupId>com.github.maximan3000</groupId>
+  <artifactId>caesar-cipher</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+### Gradle Groovy DSL
+```
+implementation 'com.github.maximan3000:caesar-cipher:1.0.0'
+```
+
 ## Algorithm
 
 * [Read it on wikipedia.org](https://en.wikipedia.org/wiki/Caesar_cipher)
