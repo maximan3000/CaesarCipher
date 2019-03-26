@@ -1,3 +1,4 @@
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.maximan3000/caesar-cipher.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.maximan3000%22%20AND%20a:%22caesar-cipher%22)
 # Caesar Cipher (Keyed Caesar) java library
 
 Java library for Ceasar Cipher (Keyed Caesar) that can:
