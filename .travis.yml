@@ -3,3 +3,6 @@ jdk: oraclejdk8
 
 before_install:
   - cd caesar-cipher/
+  
+scripts:
+  - mvn clean test
